@@ -87,7 +87,6 @@
 		50717F82291950CD00B552F1 = {
 			isa = PBXGroup;
 			children = (
-				8F9213BB2959F96800062770 /* ViewControllerEdit.swift */,
 				50717F8D291950CD00B552F1 /* Notes */,
 				50717FA4291950DE00B552F1 /* NotesTests */,
 				50717FAF291950DE00B552F1 /* NotesUITests */,
@@ -109,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				50717FCC291957D700B552F1 /* TableViewCell.swift */,
+				8F9213BB2959F96800062770 /* ViewControllerEdit.swift */,
 				50717F8E291950CD00B552F1 /* AppDelegate.swift */,
 				50717F90291950CD00B552F1 /* SceneDelegate.swift */,
 				50717F92291950CD00B552F1 /* ViewController.swift */,
