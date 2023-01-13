@@ -24,6 +24,10 @@ class ViewControllerEdit: UIViewController {
         {
             toggle.setOn(charge, animated: true)
         }
+        if let charge=datein
+        {
+            date.setDate(charge, animated: true)
+        }
     }
     
     
@@ -33,10 +37,12 @@ class ViewControllerEdit: UIViewController {
     
     @IBOutlet weak var toggle: UISwitch!
     
-    @IBOutlet weak var dateEdit: UIView!
+    @IBOutlet weak var date: UIDatePicker!
+    
     var titrein: String?
     var descin: String?
     var togglein: Bool?
+    var datein: Date?
     var row: Int = 0
     
     /*

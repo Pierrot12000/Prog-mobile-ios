@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             taches.remove(at: row)
             done.remove(at: row)
             desc.remove(at: row)
+            dates.remove(at: row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -41,6 +42,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var taches:[String]=["Acheter un cadi", "Acheter du lait"]
     var  done:[Bool]=[false, false]
     var desc: [String]=["un cadi qui roule bien", "100% bio 100% naturel sans gluten"]
+    var dates: [Date]=[Date(), Date(timeIntervalSinceReferenceDate: 30)]
+    
+    //done=done.sorted(by: {s1, s2 in s1.prix<s2.prix})
+    //done.filter({$0.prix<=Double(slider.value)})
 
     @IBOutlet weak var myTableView: UITableView!
     
@@ -57,6 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             vc.titrein=taches[row]
             vc.descin=desc[row]
             vc.togglein=done[row]
+            vc.datein=dates[row]
             vc.row=row
             myTableView.deselectRow(at: myTableView.indexPathForSelectedRow!, animated: true)
         }
@@ -69,11 +75,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let textInput = sourceViewController.titre.text!
         let descInput = sourceViewController.desc.text!
         let toggleInput = sourceViewController.toggle.isOn
+        let dateInput = sourceViewController.date.date
         let row=sourceViewController.row
         
         taches[row]=textInput
         desc[row]=descInput
         done[row]=toggleInput
+        dates[row]=dateInput
         
         myTableView.reloadData()
     }
@@ -88,8 +96,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             let textInput = sourceViewController.textInput.text!
             let descInput = sourceViewController.descInput.text!
+            let dateInput = sourceViewController.dateInput.date
             taches.append(textInput)
             done.append(false)
+            dates.append(dateInput)
             if descInput.isEmpty
             {
                 desc.append("")

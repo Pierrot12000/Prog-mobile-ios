@@ -19,7 +19,8 @@ class ViewControllerAdd: UIViewController {
     
     @IBOutlet weak var descInput: UITextField!
     
-    @IBOutlet weak var dateselect: UIView!
+    @IBOutlet weak var dateInput: UIDatePicker!
+    
     
     /*
     // MARK: - Navigation
