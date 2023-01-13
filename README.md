@@ -18,7 +18,7 @@ Il est possible d'ajouter une tache en appuyant sur le "+" de la vue principale.
 La, une nouvelle vue s'ouvre avec la possibilité de créer une tache en lui attribuant :
 - un titre
 - une description
-- une date d'échéance (work in progress)
+- une date d'échéance
 
 ![](https://github.com/Pierrot12000/Prog-mobile-ios/blob/main/ajouter%20une%20tache.png)
 
